@@ -39,7 +39,7 @@ echo "===== [2/6] Installing Prometheus Node Exporter ====="
 mkdir -p /tmp/exporter
 cd /tmp/exporter
 
-NODE_VERSION="1.10.2"
+NODE_VERSION="1.12.1"
 echo "Downloading Node Exporter v${NODE_VERSION}..."
 wget -q https://github.com/prometheus/node_exporter/releases/download/v${NODE_VERSION}/node_exporter-${NODE_VERSION}.linux-amd64.tar.gz
 
@@ -98,9 +98,8 @@ sudo apt install -y python3 python3-venv
 mkdir -p /tmp/project
 cd /tmp/project
 echo "Cloning vprofile-project repository..."
-git clone https://github.com/hkhcoder/vprofile-project.git
-cd vprofile-project/
-git checkout monitoring
+git clone https://github.com/Uday-mac/monitoring.git
+cd monitoring/
 
 # Move titan to /opt and set up virtual environment
 mkdir -p /opt/titan

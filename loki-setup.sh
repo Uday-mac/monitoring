@@ -11,7 +11,7 @@ BINARY="loki-linux-amd64"
 WORK_DIR="/tmp/loki"
 CONFIG_DIR="/etc/loki"
 DATA_DIR="/var/lib/loki"
-BIN_DIR="usr/local/bin"
+BIN_DIR="/usr/local/bin"
 SERVICE_FILE="/etc/systemd/system/loki.service"
 
 #installing unzip
@@ -43,6 +43,9 @@ chmod 775 "${DATA_DIR}"
 
 #create config directory
 mkdir -p "${CONFIG_DIR}"
+
+# Set ownership for config
+sudo chown -R loki:loki "${CONFIG_DIR}"
 
 #create a config file
 cat << EOF > "${CONFIG_DIR}/config.yml"
@@ -98,9 +101,6 @@ ruler:
 frontend:
   encoding: protobuf
 EOF
-
-# Set ownership for config
-sudo chown -R loki:loki "${CONFIG_DIR}"
 
 # Create systemd service file
 sudo cat <<EOF > "${SERVICE_FILE}"
