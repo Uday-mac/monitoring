@@ -152,8 +152,8 @@ echo "===== [4/6] Setting up load generation scripts ====="
 apt install -y stress
 
 echo "Downloading load scripts..."
-wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/hkhcoder/vprofile-project/refs/heads/monitoring/load.sh
-wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/hkhcoder/vprofile-project/refs/heads/monitoring/generate_multi_logs.sh
+wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/Uday-mac/monitoring/refs/heads/main/load.sh
+wget -q -P /usr/local/bin/ https://raw.githubusercontent.com/Uday-mac/monitoring/refs/heads/main/generate_multi_logs.sh
 
 chmod +x /usr/local/bin/load.sh /usr/local/bin/generate_multi_logs.sh
 
