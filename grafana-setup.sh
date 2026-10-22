@@ -4,9 +4,9 @@
 set -e
 
 #Setting up the variables
-DOWNLOAD_URL="https://dl.grafana.com/grafana/release/${GRAFANA_VERSION}/grafana_${GRAFANA_VERSION}_36482603486_linux_amd64.deb"
 GRAFANA_VERSION="13.2.3"
-DEB_FILE= "grafana_${GRAFANA_VERSION}_36482603486_linux_amd64.deb"
+DOWNLOAD_URL="https://dl.grafana.com/grafana/release/${GRAFANA_VERSION}/grafana_${GRAFANA_VERSION}_36482603486_linux_amd64.deb"
+DEB_FILE="grafana_${GRAFANA_VERSION}_36482603486_linux_amd64.deb"
 GRAFANA_SERVICE="grafana-server"
 
 #Installing necessary dependencies...

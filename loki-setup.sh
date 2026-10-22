@@ -130,5 +130,5 @@ sudo systemctl start loki
 sudo systemctl status loki --no-pager
 
 # Wait and verify
-sleep 120
+sleep 150
 curl http://localhost:3100/ready
